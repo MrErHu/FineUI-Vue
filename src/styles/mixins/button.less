@@ -1,0 +1,16 @@
+.btn-plain(@color) {
+  color: @color;
+  background: transparent;
+}
+
+
+.btn-ghost(@color) {
+  color: @color;
+  border: 1px solid @color;
+  background: transparent;
+
+  &:hover {
+    color: @blank-color;
+    background: @color;
+  }
+}

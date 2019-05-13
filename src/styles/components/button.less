@@ -1,0 +1,104 @@
+@btn-prefix-cls: ~"@{css-prefix}btn";
+@btn-height: 30px;
+@btn-line-height: 28px;
+
+
+.@{btn-prefix-cls} {
+
+  display: inline-block;
+  color: @normal-color;
+  height: @btn-height;
+  line-height: @btn-line-height;
+  padding: 0px 10px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-align: center;
+  user-select: none;
+  cursor: @cursor-allow;
+
+  &, &:active, &:focus {
+    outline: 0;
+  }
+
+  // level
+
+  &-common {
+    background: @primary-color;
+  }
+
+  &-success {
+    background: @success-color;
+  }
+
+  &-warning {
+    background: @warning-color;
+  }
+
+  &-error {
+    background: @error-color;
+  }
+
+  &-ignore {
+    background: transparent;
+    color: @primary-color;
+    border: 1px solid @primary-color;
+  }
+
+  // plain
+
+  &-common-plain {
+    .btn-plain(@primary-color);
+  }
+
+  &-success-plain {
+    .btn-plain(@success-color);
+  }
+
+  &-warning-plain {
+    .btn-plain(@warning-color);
+  }
+
+  &-error-plain {
+    .btn-plain(@error-color);
+  }
+
+  &-ignore-plain {
+    .btn-plain(@primary-color);
+  }
+
+  // ghost
+
+  &-common-ghost {
+    .btn-ghost(@primary-color)
+  }
+
+  &-success-ghost {
+    .btn-ghost(@success-color)
+  }
+
+  &-warning-ghost {
+    .btn-ghost(@warning-color)
+  }
+
+  &-error-ghost {
+    .btn-ghost(@error-color)
+  }
+
+  &-ignore-ghost {
+    .btn-ghost(@primary-color)
+  }
+
+  // disabled
+  &-disabled {
+    color: @disabled-color !important;
+
+    &:hover {
+      cursor: @cursor-disabled;
+    }
+  }
+
+  &-not-plain-disabled {
+    background: @disabled-background !important;
+    border-color: @disabled-border !important;
+  }
+}
