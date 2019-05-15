@@ -1,7 +1,7 @@
 <template>
     <button :class="classes" @click="handleClick">
-        <Icon :type="icon" v-if="icon"></Icon>
-        <slot></slot>
+        <Icon :type="icon" v-if="icon" class="icon-btn"></Icon>
+        <span><slot></slot></span>
     </button>
 </template>
 
